@@ -40,8 +40,33 @@ const BookingForm = () => {
         setPhone('');
     }
 
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const data = {
+  userName: name,
+  userEmail: email,
+  userPhone: phone,
+  design: selectedDesign
+};
+
+    try {
+      const response = await fetch('http://localhost:5000/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert("Booking sent! Check your backend terminal.");
+      }
+    } catch (error) {
+      alert("Error: Is your backend server running on port 5000?");
+    }
+  };
+
     return (
-        <div className={styles.formContainer}>
+        <form onSubmit={handleSubmit} className={styles.formContainer}>
             <AnimatePresence mode="wait">
                 {step === 1 && (
                     <motion.div key="step1" initial={{ opacity: 0, x: '-100%' }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: '100%' }}>
@@ -82,12 +107,12 @@ const BookingForm = () => {
                         <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} className={styles.input} />
                         <div className={styles.buttons}>
                             <button onClick={prevStep} className={styles.button}>Back</button>
-                            <button onClick={handleBooking} className={styles.button}>Confirm Booking</button>
+                            <button type="submit" className={styles.button}>Confirm Booking</button>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </form>
     );
 };
 

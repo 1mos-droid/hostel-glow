@@ -19,7 +19,7 @@
   --color-secondary: #000080; /* Blue */
   --color-accent: #A52A2A; /* Brown */
   --color-background: #f0f0f0;
-  --text-color: #000080;
+  --text-color: #ffffff;
   --card-background: #ffffff;
 }
 
@@ -33,7 +33,7 @@
 }
 
 body {
-    cursor: none;
+    cursor: auto;
     background-color: var(--color-background);
     color: var(--text-color);
     font-family: var(--font-family-sans);
@@ -42,12 +42,20 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: var(--font-family-serif);
   font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
   color: var(--color-secondary);
 }
+
+  h1{ 
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  color: #ffffff;
+  }
+
 
 p {
   margin-bottom: 1rem;
