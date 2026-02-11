@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1563503194169-835623495b68');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  color: var(--hero-text-color);
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-light);
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.cta {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}

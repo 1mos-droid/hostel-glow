@@ -1,0 +1,44 @@
+.services {
+  padding: 6rem 2rem;
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  color: var(--color-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 2.5rem;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-family: var(--font-family-serif);
+}
+
+.card p {
+  color: var(--text-color);
+}

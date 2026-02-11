@@ -1,0 +1,31 @@
+.footer {
+  padding: 4rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.social a {
+  color: var(--text-color);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
