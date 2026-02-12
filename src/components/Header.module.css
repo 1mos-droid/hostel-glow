@@ -55,3 +55,74 @@
 .nav a:hover::after {
   width: 100%;
 }
+
+.mobileMenuIcon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-secondary);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobileNav a {
+    font-size: 1.5rem;
+  }
+}

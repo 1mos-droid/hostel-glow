@@ -29,3 +29,9 @@
 .footer p {
     font-size: 0.9rem;
 }
+
+@media screen and (max-width: 480px) {
+  .social {
+    gap: 1.5rem;
+  }
+}

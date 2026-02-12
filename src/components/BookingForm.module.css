@@ -139,3 +139,17 @@
   background-color: var(--color-background);
   color: var(--text-color);
 }
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    margin: 0;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .formContainer h2 {
+    font-size: 1.5rem;
+  }
+}
