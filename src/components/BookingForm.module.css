@@ -4,7 +4,7 @@
   max-width: 600px;
   margin: 4rem auto;
   padding: 2rem;
-  background: var(--color-background);
+  background: var(--card-background);
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -14,6 +14,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
+  color: var(--text-color);
 }
 
 .select,
@@ -21,9 +22,11 @@
   width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--text-color);
   border-radius: 4px;
   font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--text-color);
 }
 
 .buttons {
@@ -46,7 +49,37 @@
 }
 
 .button:hover {
-  background-color: #f7b731;
+  filter: brightness(1.2);
+}
+
+.designGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.designCard {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.designCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.designTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 /* react-datepicker overrides */
@@ -58,6 +91,7 @@
   width: 100%;
   border: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background-color: var(--card-background);
 }
 
 .react-datepicker__header {
@@ -74,7 +108,7 @@
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker__time-name {
-  color: var(--color-text);
+  color: var(--text-color);
 }
 
 .react-datepicker__day--selected,
@@ -87,4 +121,21 @@
 .react-datepicker__day--keyboard-selected {
     background-color: var(--color-accent);
     color: var(--color-background);
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  opacity: 0.7;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--text-color);
 }

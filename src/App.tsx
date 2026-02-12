@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Loader from './components/Loader';
+import { Toaster } from 'react-hot-toast';
 
 const Home = lazy(() => import('./pages/Home'));
 const DesignStudio = lazy(() => import('./pages/DesignStudio'));
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <CustomCursor />
+      <Toaster />
       <Header />
       <Suspense fallback={<Loader />}>
         <AnimatePresence mode="wait">
